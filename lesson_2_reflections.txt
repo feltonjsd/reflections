@@ -1,4 +1,4 @@
-What happens when you initialize a repository? Why do you need to do it?
+﻿What happens when you initialize a repository? Why do you need to do it?
 
 	It creates a .git file which is hidden metadata. This allows you to store files in a git repository.
 	
@@ -45,3 +45,18 @@ git checkout -b new_branch_name  |    Creates a new branch and do a checkout on 
 git merge branch1 branch2  |    Merge two branches, branch2 get merged into branch1
 git branch -d name  |    Remove the branch with the specified name
 git show commitId  |    Show the changes made in this commit compared to the previous version. This is working even after merging.
+
+…or create a new repository on the command line
+
+
+echo "# reflections" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/feltonjsd/reflections.git
+git push -u origin master
+…or push an existing repository from the command line
+
+
+git remote add origin https://github.com/feltonjsd/reflections.git
+git push -u origin master
